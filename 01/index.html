@@ -1,1 +1,28 @@
+<html>
+<head>
+  <style>
+  body {
+    margin: 0;
+    background-color: rgb(50 5 10);
+    background-image: url('photo.jpg');
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  </style>
+</head>
 
+<body>
+
+  <audio id="audio">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const body = document.querySelector('body');
+    body.addEventListener('click', () => { audio.paused ? audio.play() : audio.pause(); });
+  </script>
+
+</body>
+</html>
